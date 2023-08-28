@@ -125,6 +125,9 @@
                     <li><a href="{{ route('contact-us') }}"
                             class="{{ request()->is('contact-us') ? 'active' : '' }}">{{ __('header.contact-us') }}</a>
                     </li>
+                    <li><a href="{{ route('IT Hub') }}"
+                            class="{{ request()->is('IT Hub') ? 'active' : '' }}">{{ __('header.IT Hub/Business Incubator') }}</a>
+                    </li>
                 </ul>
             </nav>
             <div class="right">
