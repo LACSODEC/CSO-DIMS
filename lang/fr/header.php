@@ -31,5 +31,6 @@ return [
     'lodge' => 'loger',
     'contact-us' => 'contacter-nous',
     'Donate' => 'Faire un don',
+    'IT Hub/Business Incubator' => "Hub Informatique/Incubateur d'entreprises",
 
 ];
