@@ -31,6 +31,6 @@ return [
     'lodge' => 'lodge',
     'contact-us' => 'contact-us',
     'Donate' => 'Donate',
-    'IT Hub/Business Incubator' => 'IT Hub/Business Incubator',
+    'IT Hub' => 'IT Hub',
 
 ];
