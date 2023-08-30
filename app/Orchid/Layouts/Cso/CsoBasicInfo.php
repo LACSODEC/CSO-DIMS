@@ -95,6 +95,9 @@ class CsoBasicInfo extends Rows
                     'CSO Network' => 'CSO Network',
                     'CBO' => 'CBO',
                     'Faith Based organization' => 'Faith Based organization',
+                    'International NGO' => 'International NGO',
+                    'Declared Association (1990 law)' => 'Declared Association (1990 law)',
+                    'Declared Association (1999 law)' => 'Declared Association (1999 law)',
                 ])
                 ->title('Type of organization')
                 ->help('Select the type of organization'),

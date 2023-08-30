@@ -14,7 +14,7 @@ class SearchController extends Controller
     {
         $search = $request->query('search', null);
         $filter = $request->query('filter', null);
-        $csos = Cso::where('name', 'LIKE', "%{$search}%")->orWhere('domain', 'LIKE', "%{$search}%")->orWhere('vision_statement', 'LIKE', "%{$search}%")->where('status', 'verified')->get();
+        $csos = Cso::where('name', 'LIKE', "%{$search}%")->orWhere('domain', 'LIKE', "%{$search}%")->orWhere('vision_statement', 'LIKE', "%{$search}%")->orWhere('mission', 'LIKE', "%{$search}%")->where('status', 'verified')->get();
         $experts = ExpertProfile::with('user')->whereHas('user', function ($query) use ($search) {
             $query->where('name', 'LIKE', "%{$search}%")->where('status', 'approved');
         })->get();

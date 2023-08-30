@@ -15,7 +15,7 @@
                     <h5>{{__('cso.Vision')}}:</h5>
                     <p>{{$cso->vision_statement}}</p>
                     <h5>{{__('cso.Mission')}}:</h5>
-                    <p><b>{{$cso->mission}}</b></p>
+                    <p>{{$cso->mission}}</p>
                     <h5>{{__('cso.Background and track record')}}:</h5>
                     <p>{{$cso->background}}</p>
                     <div class="title">

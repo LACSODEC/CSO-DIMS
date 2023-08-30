@@ -53,6 +53,7 @@
                             <img src="{{ asset($cso->image) }}" alt="" />
                             <h2>{{$cso->name}}</h2>
                             <p>{{$cso->vision_statement}}</p>
+                            <p>{{$cso->mission}}</p>
                         </a>
                         @endforeach
                     </div>

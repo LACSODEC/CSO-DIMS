@@ -79,6 +79,9 @@
                                     <option value="Village development Association" {{ old('organization_type') == 'Village development Association' ? 'selected' : '' }}>{{__('cso.Village development Association')}}</option>
                                     <option value="CSO Network" {{ old('organization_type') == 'CSO Network' ? 'selected' : '' }}>{{__('cso.CSO Network')}}</option>
                                     <option value="Faith Based organization" {{ old('organization_type') == 'Faith Based organization' ? 'selected' : '' }}>{{__('cso.Faith Based organization')}}</option>
+                                    <option value="International NGO" {{ old('organization_type') == 'International NGO' ? 'selected' : '' }}>{{__('cso.International NGO')}}</option>
+                                    <option value="Declared Association (1990 law)" {{ old('organization_type') == 'Declared Association (1990 law)' ? 'selected' : '' }}>{{__('cso.Declared Association (1990 law)')}}</option>
+                                    <option value="Declared Association (1999 law)" {{ old('organization_type') == 'Declared Association (1999 law)' ? 'selected' : '' }}>{{__('cso.Declared Association (1999 law)')}}</option>
                                 </select>
                                 @error('organization_type')
                                 <span class="error-msg">{{ $message }}</span>
@@ -287,6 +290,18 @@
                                 <span class="error-msg">{{ $message }}</span>
                                 @enderror
                                 <span id="vision-count">0/150 {{__('cso.words')}}</span>
+                            </div>
+                            <div class="field 
+                            @error('mission')
+                                error
+                            @enderror
+                            ">
+                                <label for="" class="no-text-transform">{{__("cso.CSO's Mission statement")}} *</label>
+                                <textarea type="text" name="mission" id="mission-statement" value="" oninput="missionCountWords()">{{ old('mission_statement') }}</textarea>
+                                @error('mission_statement')
+                                <span class="error-msg">{{ $message }}</span>
+                                @enderror
+                                <span id="mission-count">0/150 {{__('cso.words')}}</span>
                             </div>
                             <div class="field 
                             @error('primary_target_beneficiaries')
@@ -522,5 +537,18 @@
             document.getElementById('vision-statement').disabled = false;
         }
         document.getElementById('vision-count').textContent = `${wordCount}/150 words maximum`;
+    }
+
+    function missionCountWords() {
+        const input = document.getElementById('mission-statement').value;
+        const wordCount = input.trim().split(/\s+/).length;
+        if (wordCount >= 150) {
+            // Disable the input field if word count exceeds 150
+            document.getElementById('mission-statement').disabled = true;
+        } else {
+            // Enable the input field otherwise
+            document.getElementById('mission-statement').disabled = false;
+        }
+        document.getElementById('mission-count').textContent = `${wordCount}/150 words maximum`;
     }
 </script>

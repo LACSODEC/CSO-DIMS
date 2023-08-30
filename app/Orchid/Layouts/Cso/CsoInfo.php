@@ -38,8 +38,8 @@ class CsoInfo extends Rows
                 ->required(),
 
             TextArea::make('cso.mission')
-                ->title('CSO mission')
-                ->placeholder('CSO mission'),
+                ->title('CSO Mission statement')
+                ->placeholder('CSO mission statement'),
 
             TextArea::make('cso.background')
                 ->title('CSO background and track record')
