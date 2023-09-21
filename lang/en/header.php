@@ -32,5 +32,6 @@ return [
     'contact-us' => 'contact-us',
     'Donate' => 'Donate',
     'IT Hub' => 'IT Hub',
+    'IT Hub/Business Incubator' => 'IT Hub/Business Incubator',
 
 ];

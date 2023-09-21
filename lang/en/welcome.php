@@ -31,5 +31,7 @@ return [
     'Read more' => 'Read more',
     'Latest CSO' => 'Latest CSO',
     'Posted by' => 'Posted by',
+    'CSOs' => 'CSOs',
+    'Users' => 'Users',
 
 ];

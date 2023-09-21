@@ -19,8 +19,11 @@
                 <h2>{{__('welcome.About Us')}}</h2>
                 <p>{{__('welcome.CSO media space is our Main Goal')}}</p>
                 <div class="members">
-                    <h3>{{$members}}</h3>
-                    <p>{{__('welcome.Members')}}</p>
+                    <h3>{{$users}}</h3>
+                    <p>{{__('welcome.Users')}}</p>
+                    <br>
+                    <h3>{{$csos}}</h3>
+                    <p>{{__('welcome.CSOs')}}</p>
                 </div>
                 <a href="/about-us" class="custom-button secondary"><span>{{__('welcome.Learn more')}}</span></a>
             </div>

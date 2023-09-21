@@ -93,6 +93,18 @@ class CsoActivitySeeder extends Seeder
                 'name' => 'others',
                 'french_name' => 'autres',
             ],
+            [
+                'name' => 'Mental Health',
+                'french_name' => 'Santé Mentale',
+            ],
+            [
+                'name' => 'Agriculture',
+                'french_name' => 'Agriculture',
+            ],
+            [
+                'name' => 'Rural Development',
+                'french_name' => 'Developpement Rural',
+            ],
         ]);
     }
 }

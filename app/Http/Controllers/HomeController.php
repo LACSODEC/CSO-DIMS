@@ -7,6 +7,7 @@ use App\Models\ContactInfo;
 use App\Models\Cso;
 use App\Models\Event;
 use App\Models\ExpertProfile;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -21,6 +22,7 @@ class HomeController extends Controller
         $events = Event::count();
         $trainings = Event::where('type', 'training')->count();
         $csos = Cso::where('status', 'verified')->count();
+        $users = User::count();
 
         return view('welcome', [
             'latestExperts' => $latestExperts,
@@ -32,6 +34,7 @@ class HomeController extends Controller
             'events' => $events,
             'trainings' => $trainings,
             'csos' => $csos,
+            'users' => $users,
         ]);
     }
 }

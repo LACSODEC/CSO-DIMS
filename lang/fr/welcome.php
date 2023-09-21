@@ -31,5 +31,7 @@ return [
     'Read more' => 'En savoir plus',
     'Latest CSO' => 'Récente OSC',
     'Posted by' => 'Publié par',
+    'CSOs' => 'OSC',
+    'Users' => 'Utilisateurs',
 
 ];

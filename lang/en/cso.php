@@ -91,5 +91,8 @@ return [
     'Are your staffs registered with CNPS?' => 'Are your staffs registered with CNPS?',
     "CSO's Contacts" => "CSO's Contacts",
     'Website' => 'Website',
+    'Mental Health' => 'Mental Health',
+    'Agriculture' => 'Agriculture',
+    'Rural Development' => 'Rural Development',
 
 ];

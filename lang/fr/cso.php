@@ -91,5 +91,8 @@ return [
     'Are your staffs registered with CNPS?' => 'Vos personnels sont-ils immatriculés à la CNPS?',
     "CSO's Contacts" => "Contacts de l'OSC",
     'Website' => 'Site web',
+    'Mental Health' => 'Santé Mentale',
+    'Agriculture' => 'Agriculture',
+    'Rural Development' => 'Développement Rural',
 
 ];

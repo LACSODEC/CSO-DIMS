@@ -98,6 +98,9 @@ class CsoBasicInfo extends Rows
                     'International NGO' => 'International NGO',
                     'Declared Association (1990 law)' => 'Declared Association (1990 law)',
                     'Declared Association (1999 law)' => 'Declared Association (1999 law)',
+                    'Mental Health' => 'Mental Health',
+                    'Agriculture' => 'Agriculture',
+                    'Rural Development' => 'Rural Development',
                 ])
                 ->title('Type of organization')
                 ->help('Select the type of organization'),

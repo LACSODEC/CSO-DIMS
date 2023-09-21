@@ -2953,7 +2953,7 @@ section.other-expert-section {
 
                             .grid-item-1 {
                                 rotate: -90deg;
-                                
+
                                 p {
                                     color: $red;
                                 }
@@ -2971,7 +2971,7 @@ section.other-expert-section {
                                 width: 95%;
                                 color: $green;
 
-                                
+
                                 p {
                                     color: $red;
                                 }
@@ -3013,10 +3013,11 @@ section.other-expert-section {
                         grid-template-columns: auto;
                         margin-bottom: 1rem;
                         gap: 1rem;
-    
+
                         img {
                             width: 45%;
                             height: auto;
+                            border-radius: 15px;
                         }
 
                         figcaption {
@@ -3029,7 +3030,141 @@ section.other-expert-section {
                 }
 
             }
+        }
+    }
 
+    .ithub-section-2 {
+        display: flex;
+        height: 50%;
+        // background-color: #000000;
+        background-image: url("../../public/images/ithub/code-background.png");
+
+        .con {
+            gap: 1rem;
+            display: grid;
+
+            .title,
+            .content {
+                font-size: 40px;
+                text-align: center;
+                color: $secondary;
+                font-weight: bold;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+                p {
+                    color: white;
+                    font-size: 25px;
+                }
+            }
+
+        }
+    }
+
+    .ithub-section-3 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding-top: 30px;
+
+        .con {
+            row-gap: 1rem;
+
+            .heading {
+                background-color: $primary;
+                display: grid;
+                grid-template-columns: 30% auto;
+                border-radius: 25px;
+
+                @include for-mobile {
+                    grid-template-columns: 40% auto;
+                }
+
+                .title {
+                    background-color: $secondary;
+                    font-size: 40px;
+                    font-weight: bold;
+                    text-align: center;
+                    border-radius: 20px;
+
+                    @include for-mobile {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .objectives {
+                padding-top: 5px;
+
+                .obj {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .ithub-section-4 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 30px;
+        // background-color: $primary-light;
+
+        .heading {
+            background-color: $primary;
+            display: grid;
+            grid-template-columns: auto auto 40%;
+            border-radius: 25px;
+
+            @include for-mobile {
+                grid-template-columns: auto auto 40%;
+            }
+
+            .title {
+                background-color: $secondary;
+                font-size: 40px;
+                font-weight: bold;
+                text-align: center;
+                border-radius: 20px;
+
+                @include for-mobile {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .services > .container > .row {
+            row-gap: 1rem;
+
+            .single-service {
+                padding: 25px;
+                background-color: $white;
+                height: 100%;
+
+                .service-header {
+                    font-weight: bold;
+                    text-transform: uppercase;
+
+                    h4 {
+                        font-weight: bolder;
+
+                        .h5 {
+                            font-size: 15px;
+                        }
+                    }
+
+                    i {
+                        color: $primary;
+                    }
+                }
+            }
+
+            div.single-service:hover {
+                background-color: $primary-light;
+            }
+        }
+    }
+
+    ul {
+        padding: 10px;
+        li {
+            list-style-type: upper-roman;
+            padding-left: 5px;
         }
     }
 }
