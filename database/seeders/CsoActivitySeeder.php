@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\CsoActivityDomain;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -12,7 +13,7 @@ class CsoActivitySeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('cso_activity_domains')->insert([
+        $data = [
             [
                 'name' => 'Women empowerment',
                 'french_name' => 'Autonomisation des femmes',
@@ -105,6 +106,18 @@ class CsoActivitySeeder extends Seeder
                 'name' => 'Rural Development',
                 'french_name' => 'Developpement Rural',
             ],
-        ]);
+        ];
+
+        $this->insertCsoActivityDomains($data);
+    }
+
+    public function insertCsoActivityDomains($data)
+    {
+        foreach ($data as $item) {
+            CsoActivityDomain::updateOrCreate(
+                ['name' => $item['name']], 
+                ['french_name' => $item['french_name']]
+            );
+        }
     }
 }

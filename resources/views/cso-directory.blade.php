@@ -12,7 +12,11 @@
                 <aside>
                     <nav>
                         <ul>
-                            <li><a href="/cso-directory">{{ __('cso.All') }}</a></li>
+                            <h5>Total Registered CSOs ({{$total_csos}})</h5>
+                            <h6>Verified ({{$verified_csos}})</h6>
+                            <h6>Unverified ({{$unverified_csos}})</h6>
+                            <hr>
+                            {{-- <li><a href="/cso-directory">{{ __('cso.All') }} ({{$total_csos}})</a></li> --}}
                             @foreach ($cso_domains as $domain)
                                 @if (Lang::locale() == 'en')
                                     <li><a href="/cso-directory?domain={{ $domain->name }}">{{ $domain->name }}

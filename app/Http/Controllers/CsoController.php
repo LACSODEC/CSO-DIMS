@@ -19,6 +19,10 @@ class CsoController extends Controller
 
     public function index(Request $request)
     {
+
+        $total_csos = Cso::count();
+        $verified_csos = Cso::where('status', 'verified')->count();
+        $unverified_csos = Cso::where('status', 'not verified')->count();
         $domain = $request->query('domain');
         $csosQuery = Cso::where('status', 'verified');
         if ($domain) {
@@ -33,6 +37,9 @@ class CsoController extends Controller
         }
 
         return view('cso-directory', [
+            'total_csos' => $total_csos,
+            'verified_csos' => $verified_csos,
+            'unverified_csos' => $unverified_csos,
             'csos' => $csos,
             'cso_domains' => $cso_domains,
         ]);

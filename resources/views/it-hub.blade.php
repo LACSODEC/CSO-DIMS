@@ -13,8 +13,7 @@
                     <h2>{{__('ithub.LACSODEC IT HUB & BUSINESS INCUBATOR')}}</h2>
                     <h2 style="color: red;">“{{__('ithub.We give every tech and business idea the wings to fly')}}”</h2>
                 </div>
-                <br>
-                <div class="ithub-subsection">
+                {{-- <div class="ithub-subsection">
                     <div class="left">
                         <blockquote class="mission_work">
                             <div class="grid-container">
@@ -40,23 +39,7 @@
                             </div>
                         </blockquote>
                     </div>
-                    <div class="right">
-                        <div class="hub-pics">
-                            <figure>
-                                <img src="{{ asset('images/ithub/admin-space.jpg') }}" alt="admin space" />
-                                <figcaption>
-                                    Fig. 1 - "{{__("ithub.Hub's administrator's desk")}}"
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <figcaption>
-                                    Fig. 2 - "{{__('ithub.Available workspace')}}"
-                                </figcaption>
-                                <img src="{{ asset('images/ithub/workspace-1.jpg') }}" alt="work space" />
-                            </figure>
-                        </div>
-                    </div>
-                </div>
+                </div> --}}
             </div>
         </section>
 
