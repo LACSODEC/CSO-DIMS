@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\CsoActivityDomain;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class CsoActivitySeeder extends Seeder
 {
@@ -115,7 +114,7 @@ class CsoActivitySeeder extends Seeder
     {
         foreach ($data as $item) {
             CsoActivityDomain::updateOrCreate(
-                ['name' => $item['name']], 
+                ['name' => $item['name']],
                 ['french_name' => $item['french_name']]
             );
         }
