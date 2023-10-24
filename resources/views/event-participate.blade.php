@@ -9,7 +9,6 @@
                 <div class="main-content">
                     <img src="{{ asset($event->image) }}" alt="" class="top-image">
                     <h1>{{$event->name}}</h1>
-                    <h3>{{__('events.Type of event')}}: {{$event->type}}</h3>
                     <h6>{{__('events.Start date')}}: <b>{{$event->date}}</b></h6>
                     <h6>{{__('events.End date')}}: <b>{{$event->end_date}}</b></h6>
                     <br>
@@ -17,12 +16,17 @@
                 </div>
             </div>
         </section>
-        <hr>
+        <hr> 
             <section>
-                @if ($event->date >= now())
+                <h3>Register to participate</h3>
+                @if ($event->url)
+                <h4>Register via link or the form provided below</h4>
+                <a href="">{{$event->url}}</a>
+                @endif
+                @if ($event->date >= now() || $event->date <= now())
                 <form action="{{ route('event-participate-store', ['event' => $event->id]) }}" class="create-cso-form" method="POST">
                     @csrf
-                    <h4>Register to participate</h4>
+                    <br>
                     <div class="form-section">
                         <div class="flex">
                             <div class="field">
