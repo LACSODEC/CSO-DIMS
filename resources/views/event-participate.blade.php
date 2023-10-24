@@ -18,10 +18,10 @@
         </section>
         <hr> 
             <section>
-                <h3>Register to participate</h3>
+                <h3>{{__('events.Register to participate')}}</h3>
                 @if ($event->url)
-                <h4>Register via link or the form provided below</h4>
-                <a href="">{{$event->url}}</a>
+                <h4>{{__('events.Register via link or the form provided below')}}</h4>
+                <p>{{__('events.Link')}}: <a href="{{$event->url}}" target="__blank">{{__('events.Click here')}}</a></p>
                 @endif
                 @if ($event->date >= now() || $event->date <= now())
                 <form action="{{ route('event-participate-store', ['event' => $event->id]) }}" class="create-cso-form" method="POST">
@@ -30,7 +30,7 @@
                     <div class="form-section">
                         <div class="flex">
                             <div class="field">
-                                <label for="">Name *</label>
+                                <label for="">{{__('events.Name')}} *</label>
                                 <input type="text" name="name" id="name" placeholder=""
                                     value="{{ old('name') }}">
                                 @error('name')
@@ -38,7 +38,7 @@
                                 @enderror
                             </div>
                             <div class="field">
-                                <label for="email">Email *</label>
+                                <label for="email">{{__('events.Email')}} *</label>
                                 <input type="email" name="email" id="partnership" placeholder=""
                                     value="{{ old('email') }}">
                                 @error('email')
@@ -48,7 +48,7 @@
                         </div>
                         <div class="flex">
                             <div class="field">
-                                <label for="sex">Sex *</label>
+                                <label for="sex">{{__('events.Sex')}} *</label>
                                <select name="sex" id="">
                                <option value="" disabled hidden selected>{{__('cso.Choose')}}</option>
                                <option value="male" {{ old('sex') == 'male' ? 'selected' : '' }}>{{__('experts.Male')}}</option>
@@ -59,7 +59,7 @@
                                 @enderror
                             </div>
                             <div class="field">
-                                <label for="country">Country of origin *</label>
+                                <label for="country">{{__('events.Country of origin')}} *</label>
                                 <select name="country" id="country" value="{{ old('country') }}" >
                                     <option value="" disabled hidden selected>{{__('cso.Choose')}}</option>
                                 @foreach ($countries as $country)
@@ -78,7 +78,7 @@
                         </div>
                         <div class="flex">
                             <div class="field">
-                                <label for="phone">Phone number</label>
+                                <label for="phone">{{__('events.Phone number')}}</label>
                                 <input type="tel" name="phone" id="phone"
                                     placeholder="+237656000000" value="{{ old('phone') }}">
                                 @error('phone')
@@ -96,7 +96,7 @@
                         </div>
                         <div class="flex">
                         <div class="field">
-                                <label for="other_details">Your motivation to attend</label>
+                                <label for="other_details">{{__('events.Your motivation to attend')}}</label>
                                 <textarea name="other_details" id="other_details">{{ old('other_details') }}</textarea>
                                 @error('other_details')
                                     <span class="error-msg">{{ $message }}</span>
@@ -106,7 +106,7 @@
                     </div>
 
                     <div class="form-section">
-                        <button type="submit" class="custom-button primary">Confirm Event Participation</button>
+                        <button type="submit" class="custom-button primary">{{__('events.Confirm Event Participation')}}</button>
                     </div>
                 </form>
                 @else
